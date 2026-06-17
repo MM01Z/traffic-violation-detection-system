@@ -1,0 +1,17 @@
+CREATE DATABASE traffic_violations;
+
+USE traffic_violations;
+
+CREATE TABLE nohelmet_violations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    violation_datetime DATETIME,
+    rider_image VARCHAR(255),
+    plate_image VARCHAR(255),
+    ocr_text VARCHAR(50),
+    challan_sent BOOLEAN DEFAULT FALSE,
+    challan_price INT
+);
+
+TRUNCATE TABLE nohelmet_violations;
+
+SELECT * FROM nohelmet_violations;
